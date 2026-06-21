@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio showcasing Neuromorphic Spiking Neural Networks (SNN) vs Transformers for Google AI/ML roles.">
+    <title>SNN vs Transformer | Neuromorphic Engineering</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="blob-bg">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <nav class="glass-nav">
+        <div class="logo">SNN<span class="highlight">.</span>PORTFOLIO</div>
+        <div class="nav-links">
+            <a href="#hero">Overview</a>
+            <a href="#metrics">Performance</a>
+            <a href="#architecture">Architecture</a>
+        </div>
+    </nav>
+
+    <main>
+        <section id="hero" class="hero fade-in">
+            <div class="hero-content">
+                <div class="badge">Google AI/ML Application</div>
+                <h1 class="hero-title">Neuromorphic <span class="gradient-text">Efficiency.</span></h1>
+                <p class="hero-subtitle">Comparing Recurrent Spiking Neural Networks against Dense Transformers on Text Classification. Achieving 99.3% less energy consumption with bio-inspired synaptic pruning.</p>
+                <div class="hero-stats">
+                    <div class="stat-card glass">
+                        <h3>99.3%</h3>
+                        <p>Energy Reduction</p>
+                    </div>
+                    <div class="stat-card glass">
+                        <h3>1.96M</h3>
+                        <p>Parameters</p>
+                    </div>
+                    <div class="stat-card glass">
+                        <h3>50%</h3>
+                        <p>Sparsity</p>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual glass">
+                <canvas id="radarChart"></canvas>
+            </div>
+        </section>
+
+        <section id="metrics" class="metrics-section">
+            <h2 class="section-title">The <span class="gradient-text">Tradeoffs</span></h2>
+            
+            <div class="charts-grid">
+                <div class="chart-container glass slide-up" style="--delay: 0.1s">
+                    <div class="chart-header">
+                        <h3>Training Time</h3>
+                        <span class="icon">⚡</span>
+                    </div>
+                    <canvas id="timeChart"></canvas>
+                </div>
+                
+                <div class="chart-container glass slide-up" style="--delay: 0.2s">
+                    <div class="chart-header">
+                        <h3>Test Accuracy</h3>
+                        <span class="icon">🎯</span>
+                    </div>
+                    <canvas id="accChart"></canvas>
+                </div>
+
+                <div class="chart-container glass slide-up" style="--delay: 0.3s">
+                    <div class="chart-header">
+                        <h3>Hardware Latency (ms)</h3>
+                        <span class="icon">⏱️</span>
+                    </div>
+                    <canvas id="throughputChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="energy-banner glass slide-up" style="--delay: 0.4s">
+                <div class="energy-text">
+                    <h2>Energy per Epoch</h2>
+                    <p>The SNN replaces power-hungry Multiply-Accumulate (MAC) operations with highly sparse Accumulate (AC) operations, triggered only when neurons spike.</p>
+                </div>
+                <div class="energy-chart">
+                    <canvas id="energyChart"></canvas>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
